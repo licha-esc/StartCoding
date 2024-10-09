@@ -1,0 +1,119 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1f1f1f;
+    color: white;
+    border-radius: 5px ;
+}
+
+.logo {
+    font-size: 50px;
+    font-family: monospace;
+}
+
+.white {
+    color: white;
+}
+
+.blue {
+    color: #00BFFF; /* Puedes ajustar el tono de celeste que prefieras */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-container {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header img {
+    width: 400px;
+    height: auto;
+}
+
+header h1 {
+    color: #00BFFF;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    color: #00BFFF;
+    font-size: 25px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ppal {
+    width: 65%;
+}
+
+.card img {
+    width: 85%;
+}
+
+.italic {
+    font-style: italic;
+    font-weight: 400;
+}  
+
+.bold {
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    width: 25%;
+}
+
+.card h3 {
+    text-align: center;
+    background-color: #CCCC88;
+    width: 100%;
+    padding: 5.04px;
+}
+
+.card h4 {
+    text-align: center;
+    background-color: #CCCC88;
+    width: 100%;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: whitesmoke;
+}
+
+hr {
+    border: 0,5px solid black;
+    width: 100%;
+}
