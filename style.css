@@ -15,6 +15,7 @@ nav {
 .logo {
     font-size: 50px;
     font-family: monospace;
+    margin-left: 5%;
 }
 
 .white {
@@ -51,14 +52,68 @@ header h1 {
     color: #00BFFF;
 }
 
-section {
+.section-title {
+    color: #00BFFF;
+    font-size: 25px;
+}
+
+#registrarse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 350px;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+label {
     display: flex;
     flex-direction: column;
 }
 
-.section-title {
-    color: #00BFFF;
-    font-size: 25px;
+.radio-label {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.input-style, select {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background-color: whitesmoke;
+    padding: 4px;
+}
+
+button {
+    font-size: 16px;
+    border: none;
+    width: 90px;
+    height: 40px;
+    padding: 10px;
+    background-color: #00BFFF;
+    color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: black;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .flex {
@@ -113,7 +168,3 @@ footer {
     background-color: whitesmoke;
 }
 
-hr {
-    border: 0,5px solid black;
-    width: 100%;
-}

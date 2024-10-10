@@ -51,11 +51,58 @@
             animi mollitia! Assumenda, ratione?</p>
     </section>
 
+    <h3 class="section-title">Registrarse</h3>
     <section id="registrarse">
-        <h3 class="section-title">Registrarse</h3>
-        <form>
-            <label for="id">Nombre</label>
-            <input type="text">
+        <form method="post">
+            <!-- Si está puesto en 'post' no se va a mostrar en la url los datos como las contraseñas. Si está en 'get' si -->
+            <label> Nombre <input type="text" name="nombre" placeholder="Ej: Ana Perez" class="input-style"></label>
+            <label> Teléfono <input type="number" name="telefono" class="input-style"></label>
+            <label> Fecha de nacimiento <input type="date" class="input-style"></label>
+            <label> Correo <input type="email" name="email" class="input-style"></label>
+            <label> Contraseña <input type="password" class="input-style"></label>
+            <label> ¿Aceptás terminos y condiciones?
+                <label class="radio-label">
+                    Si
+                    <input type="radio" name="term-y-cond">
+                </label>
+                <label class="radio-label">
+                    No
+                    <input type="radio" name="term-y-cond">
+                </label>
+            </label>
+            <label>
+                ¿De dónde sos?
+                <select name="localidad">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Uruguay">Uruguay</option>
+                </select>
+            </label>
+            <label>
+                ¿Porqué querés suscribirte?
+                <label class="radio-label">
+                    Por hobbie
+                    <input type="checkbox" name="suscripcion" value="Hobbie">
+                </label>
+                <label class="radio-label">
+                    Por trabajo
+                    <input type="checkbox" name="suscripcion" value="Trabajo">
+                </label>
+                <label class="radio-label">
+                    Por estudio
+                    <input type="checkbox" name="suscripcion" value="Estudio">
+                </label>
+            </label>
+            <label>
+                Subí tu foto:
+                <input type="file">
+            </label>
+            <div class="button-container">
+                <button type="submit">Enviar</button>
+            </div>
         </form>
     </section>
 
