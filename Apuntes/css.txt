@@ -1,0 +1,152 @@
+Prioridades de selectores:
+
+id → clase → etiqueta
+
+class → podemos darle una clase a varios elementos, aunque no todos tengan la misma etiqueta, para darle el mismo estilo a todos los elementos que tengan esa clase.
+
+id → usarse una sola vez (casos en que vamos a dar estilo por única vez en nuestra web) → también nos va a servir si queremos linkear un elemento para navegar dentro de nuestra página (a través de la etiqueta <a><a/>).
+
+padding → crea espacio extra dentro del elemento.
+
+margin → crea espacio extra fuera del elemento.
+
+display →
+	flex: hace que un elemento en bloque se convierta en un elemento en línea.
+	block:
+	none:
+
+justify-content → acomoda los elementos horizontalmente si la dirección es row y vertical si es column.
+	center: centro.
+	space-between: acomoda los elementos los más separados posibles sin que haya espacios a los costados.
+	space-evenly: los elementos se acomodan con espacios iguales entre los elementos y los costados.
+	space-around: hay un espacio más pequeño en los costados que entre los elementos.
+
+align-items → acomoda los elementos verticalmente si la dirección es row y horizontal si es column.
+	center: centro.
+	flex-start: inicio.
+	flex-end: fin.
+
+align-self → alineación de un determinado elemento dentro de un contenedor flex.
+
+align-content → alinear múltiples líneas de elementos.
+
+flex-direction → forma de acomodar elementos vertical u horizontalmente.
+	row: horizontal (es la que viene por defecto).
+	column: vertical.
+	row-reverse / column-reverse: horizontal o verticalmente al contrario de su sentido original.
+
+divs → html y html5 → etiquetas semánticas → cumplen el mismo rol que el div pero con un nombre más descriptivo para que sepamos cual es su función y que nuestra web sea mejor indexada por los buscadores.
+	header: introducción del elemento que la contiene → si lo pongo en el body va a dar una introducción de que se trata la web. Si lo pongo dentro de una sección, la introducción de esa sección.
+	nav: contiene la barra de navegación.
+	article: unidad de contenido. (web de recetas → una sección de recetas podría englobarse en una etiqueta 'section' y cada receta en un 'article').
+	section: agrupa un tema en común.
+	aside: para contenido menos importante que el de la página misma (otra noticias).
+	footer: final de la página con datos de la web.
+	iframe: permite poner un fragmento de HTML dentro de esta etiqueta.
+		atributos →
+			src: link al 'pedacito' de HTML que deseamos se vea en nuestra web. (por ejemplo un video de YouTube, un mapa)
+			allowfullscreen: permite la pantalla completa.
+			importance: prioridad de descarga frente a otros elementos de nuestra web.
+			name: nombre que le vamos a dar a la etiqueta dependiendo del contenido que vamos a tener en ella.
+
+
+COLORES:
+
+Con RGB: rgb(cantidad de rojo, cantidad de verde, cantidad de azul)
+
+El valor máximo es de 255 para cada cantidad, también puede expresarse en porcentajes, siendo 0% = 0 y 100% = 255.
+
+En hexadecimal:
+#cantidadderojocantidaddeverdecantidaddeazul
+
+Habrá dos valores para cada cantidad #ff0000 → rojo con su valor máximo y 0 para verde y azul.
+
+Si quiero hacer violeta #ff00ff
+
+
+BORDER:
+
+border: grosor estilo color;
+border: 2px solid red;
+
+Podemos aclarar si queremos border-top (bottom, right, left).
+
+border radius: redondea las esquinas del elemento (también podemos indicar en qué esquina agregarlo, ejemplo: border-top-left).
+
+
+PSEUDOCLASES:
+
+Es una palabra que se agrega al selector y que determina el momento en el cual el elemento tendrá determinado estilo.
+
+Sintáxis: selector:pseudoclase
+
+:hover → cuando se pasa el cursor encima del elemento.
+
+:active → podría ser un botón o link. Se da cuando se hace click en ese elemento (lo que dura el botón presionado).
+
+:checked → input radio o checkbox seleccionado.
+
+:focus → cuando -normalmente en un formulario- se hace foco sobre un elemento, generalmente input (cuando se hace click en el y se tipea, ese elemento tiene el foco).
+
+:visited → un enlace ya visitado.
+
+:nth-child(posición) → selecciona elementos en determinada posición dentro de un grupo de elementos hermanos → :nth-child(4n) → acá será cada cuatro elementos dentro del grupo.
+
+
+PSEUDOELEMENTOS:
+
+Sirve para estilar partes específicas de un elemento, no se usa tanto.
+
+selector::pseudoelemento
+
+::first-letter → para modificar la primer letra.
+
+p::first-letter { text-transform: uppercase; } (para que se ponga en mayúscula).
+
+
+POSITION:
+
+static → por defecto. Se posiciona siguiendo el flujo normal de los elementos pero NO se podrá posicionar utilizando las propiedades top, left, right, bottom.
+
+relative → se posiciona también siguiendo el flujo normal de los elementos (se va a ubicar donde nosotros esperamos), pero vamos a poder 'moverlo' utilizando las propiedades antes mencionadas.
+
+absolute → se posiciona rescpecto a su predecesor más próximo que también use position (que no sea static). En caso de que no haya, se posicionará respecto al body.
+
+fixed → a diferencia de absolute, no toma en cuanta un predecesor posicionado. Sigue en la misma posición respecto de la ventana del navegador aunque se haga scroll.
+
+initial → sería lo mismo que poner 'static' (porque static es el default).
+
+inherit → valor heredado del elemento padre.
+
+sticky → comportamiento de position relative, hasta que al llegar a determinado punto empiece a funcionar como fixed → tengo un elemento a mitad de pantalla, cuando hago scroll y toco ese elemento. empieza a ser fixed.
+
+z-index → ayuda a ordenar en 'capas' nuestros elementos posicionados. El que tenga z-index de mayor valor, será el que se verá por encima de otros con menor valor.
+elemento1 {
+	position:relative;
+	z-index: 2;
+}
+
+elemento2 {
+	position: absolute;
+	z-index: 1;
+}
+
+El elemento1 se verá por encima del elemento2.
+
+
+SHADOW:
+
+Sirve para darle sombra a un elemento.
+
+text-shadow → para elementos de texto.
+box-shadow → para contenedores.
+
+Los valores que se usan son: posicionamiento respecto del elemento en vertical y horizontal, nivel de difuminación y color.
+
+box-shadow: 10px 10px (hará que se ponga una sombra totalmente negra sin difuminación)
+
+box-shadow: 10px 10px gray (sombra gris sin difuminación)
+
+box-shadow: 10px 10px 10px gray (sombra gris con difuminación)
+
+box-shadow: 10px 10px 10px 10px gray (sombra gris con difuminación y un alcance de 10px - una especie de 'tamaño')

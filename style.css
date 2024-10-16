@@ -9,7 +9,18 @@ nav {
     align-items: center;
     background-color: #1f1f1f;
     color: white;
-    border-radius: 5px ;
+    border-radius: 5px;
+    position: fixed;
+    width: 99%;
+    top: 0;
+}
+
+.nav-links:hover {
+    color: #00BFFF;
+}
+
+section {
+    padding-top: 100px;
 }
 
 .logo {
@@ -20,10 +31,12 @@ nav {
 
 .white {
     color: white;
+    text-shadow: 1px 1px 10px #00BFFF;
 }
 
 .blue {
     color: #00BFFF; /* Puedes ajustar el tono de celeste que prefieras */
+    text-shadow: 1px 1px 10px white;
 }
 
 nav a {
@@ -41,6 +54,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 130px;
 }
 
 header img {
@@ -72,6 +86,7 @@ form {
     padding: 25px;
     border: 1px solid gray;
     border-radius: 20px;
+    box-shadow: 10px 10px 25px gray;
 }
 
 label {
@@ -92,6 +107,10 @@ label {
     border: none;
     background-color: whitesmoke;
     padding: 4px;
+}
+
+.input-style:focus {
+    background-color: #dcf6ff;
 }
 
 button {

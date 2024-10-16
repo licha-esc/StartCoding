@@ -1,0 +1,40 @@
+PRINCIPALES ETIQUETAS:
+
+Elemento en línea → ocupa el espacio mínimo necesario en horizontal y permite que otro elemento se ponga al lado.
+Elemento en bloque → ocupa todo el ancho disponible y no permite que otro elemento se coloque a su lado.
+
+<h1></h1> (hasta h6) headers → títulos/subtítulos
+<p></p> → párrafo
+<img src= />
+<div></div> → contenedor → en bloque
+<span></span> → contenedor → en línea
+<ol></ol> → listas ordenadas
+<ul></ul> → listas desordenadas
+<li></li> → determinan los elementos a listar dentro de ol u ul
+<a></a> → link
+<hr/> → semánticamente representa cambio de tema entre párrafos (representado por una línea) → en bloque
+<br/> salto de línea
+
+FORMULARIOS:
+
+Etiqueta form como principal → su atributo más importante es method → post será el más seguro, mientras get hará que se muestre la información ingresada en la url.
+
+Dentro de ella los elementos:
+
+input (los campos donde voy a ingresar nombre, apellido, etc).
+
+label → como contenedor de los inputs y el texto que quiera poner antes, después o dentro del input.
+
+textarea → campo de texto multilínea (para agregar un mensaje en formulario de contacto).
+
+
+INPUT:
+
+Tipos: checkbox, radio, text, password, email, file, number, date → hay muchos más. Se escribe como cualquier atributo type="text".
+
+Atributos: value (para el valor del input), placeholder (un texto que podemos poner dentro del input para dar una pista de como completar el input pero que no le da un valor), name (muy importante, ponerlo obligatoriamente, sobre todo para los input radio), hay más.
+
+
+LABEL:
+
+Su atributo más importante es for="nombre del ID del input". Porque vincula el label con su respectivo input.
