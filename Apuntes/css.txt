@@ -150,3 +150,71 @@ box-shadow: 10px 10px gray (sombra gris sin difuminación)
 box-shadow: 10px 10px 10px gray (sombra gris con difuminación)
 
 box-shadow: 10px 10px 10px 10px gray (sombra gris con difuminación y un alcance de 10px - una especie de 'tamaño')
+
+
+MEDIA QUERIES:
+
+Con ellas, vamos a indicar a CSS que tamaños mínimos o máximos (o ambos) vamos a tomar de referencia para estilar de manera que se vea bien en todas las pantallas. En general las medidas son estas (o similares):
+
+576px, 786px, 922px y 1200px → se pueden encontrar como breakpoints.
+
+Sintaxis:
+
+@media(max-width: 576px){
+	propiedad: valor
+} → en 576px (o menos) va a tener los estilos que pongamos entre {}
+
+@media(min-width: 576px) → en 576px (o más) tendrá los estilos entre {}
+
+@media(min-width: 576px) and (max-width: 992px) → entre 576 y 992 tendrán tal estilos
+
+Siempre deberíamos ordenar de la siguiente manera:
+
+Si empezamos por desktop → tamaños de mayor a menor:
+	default - ...900 - 700 - 500...
+
+Si empezamos por mobile → al contrario:
+	...500 - 700 - 900...
+
+@media(max-width: 900px) {
+	estilos
+}
+
+@media(max-width: 700px) {
+	estilos
+}
+
+
+DROPDOWN:
+
+<div class="dropdown"> → contenedor del botón y el dropdown
+	<p class="hover-element">Menú</p> → botón, p(o cualquier elemento para hacer hover)
+        <div class="dropdown-content"> → contenedor del dropdown
+            <a href="#">Link 1</a> → links que nos llevan a una sección de nuestra web
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+</div>
+
+CSS DROPDOWN:
+
+Al contenedor del dropdown → posicionamiento relativo
+
+Al div del dropdown propiamente dicho → posicionamiento absoluto y display none
+
+Al elemento que hacemos hover le damos el estilo que queremos: ej, button{background-color: blue} y cuando hacemos hover, tiene que aparecer el dropdown.
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-content {
+	position: absolute;
+	display: none;
+}
+
+.dropdown:hover {
+	dropdown-content {
+		display: block;
+}
+}
