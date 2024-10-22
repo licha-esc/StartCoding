@@ -218,3 +218,50 @@ Al elemento que hacemos hover le damos el estilo que queremos: ej, button{backgr
 		display: block;
 }
 }
+
+
+TRANSITIONS:
+
+Define la transición entre dos estados de un elemento.
+En gral se usa a través de alguna pseudoclase.
+La propiedad transition es la abreviación de varias propiedades:
+	transition-delay: tiempo que tarda en empezar a hacer la transición.
+	transition-duration: tiempo que dura la transición en total.
+	transition-property: la propiedad que se va a modificar con esa transición.
+	transition-timing-function: velocidad de transición.
+
+transition-timing-function:
+
+ease (por defecto) → empieza lento, va más rápido y al final vuelve a estar lento.
+linear → la misma velocidad.
+ease-in → empieza lento.
+ease-out → termina lento.
+ease-in-out → lento al inicio y final.
+cubic-beizer(n,n,n,n) → valores propios.
+
+div {
+	transition: width 2s linear 1s; (prop, duración, velocidad, delay)
+}
+
+TRANSFORM:
+
+translate: mueve al elemento de su posición original.
+transform: translate (x,y);
+
+rotate: rota el elemento.
+transform: rotate(nºdeg);
+
+Hay muchos más: 'scale' para cambiar el tamaño, 'skew' para modificar los grados de los lados verticales u horizontales, 'matrix' para combinar todos los tipos de transformación ( matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() ) ).
+
+OVERLAY:
+
+<div class="container">
+	<img src="img_avatar.png" alt="avatar" class="image">
+	<div class="overlay">
+		<div class="text">Hello World</div>
+	</div>
+</div>
+
+El container va a tener los estilos que queramos (ejemplo si queremos que la imagen sea redonda, pondremos un bordes-radius) y un posicionamiento relativo, la imagen ocupará el 100% del div (podemos poner overflow: hidden, para que no rebalse o desborde el div).
+El div overlay es el que va a tener la magia → inicialmente va a tener 100% de width o height y cero del otro (depende si queremos que ingrese horizontal o verticalmente), tenemos que ubicarlo al top y left en 0 para asegurarnos que coincida con el div original y la transición que deseemos.
+Cuando hagamos hover al container pondremos al 100% el widrh o height que pusimos inicialmente en 0.
