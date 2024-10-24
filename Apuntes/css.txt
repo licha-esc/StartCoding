@@ -293,3 +293,15 @@ vertical-align → verticalmente.
 Para que sea responsiva:
 Poner un div contenedor con la propiedad overflow-x con el valor auto.
 De ésta manera lograremos un scroll que hará que podamos ver toda la tabla correctamente.
+
+
+BOOSTRAP:
+
+A través de columnas medimos el tamaño de nuestros elementos. lo pensamos en 12 columnas. Si a un div azul le doy 6 columnas y a otro rojo le doy 6 columnas. Tendremos entonces mitad azul y mitad rojo.
+
+Sintaxis:
+<div> con lase container.
+solo dentro de él podemos poner un div con clase row.
+dentro del div clase row voy a poner mis columnas (col) → por defecto de pondrá el mismo tamaño para cada una - div clase col-.
+
+Esto posiblemente sea lo más necesario para aprender de Bootstrap, lo demás son nombres de clases o copiar y pegar elementos o componentes a los que luego le daremos un estilo propio.
