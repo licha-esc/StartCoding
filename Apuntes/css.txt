@@ -264,4 +264,32 @@ OVERLAY:
 
 El container va a tener los estilos que queramos (ejemplo si queremos que la imagen sea redonda, pondremos un bordes-radius) y un posicionamiento relativo, la imagen ocupará el 100% del div (podemos poner overflow: hidden, para que no rebalse o desborde el div).
 El div overlay es el que va a tener la magia → inicialmente va a tener 100% de width o height y cero del otro (depende si queremos que ingrese horizontal o verticalmente), tenemos que ubicarlo al top y left en 0 para asegurarnos que coincida con el div original y la transición que deseemos.
-Cuando hagamos hover al container pondremos al 100% el widrh o height que pusimos inicialmente en 0.
+Cuando hagamos hover al container pondremos al 100% el width o height que pusimos inicialmente en 0.
+
+
+TABLAS:
+
+*Los mails, newsletters, no soportan flex y position entonces se deben estilar con tablas.
+
+<table> es la etiqueta que engloba toda la tabla.
+Usaremos tbody, thead, tfooter → si queremos usar etiquetas semánticas para determinar la finalidad de cada sección de la tabla.
+El header o título de cada columna o fila se dará con un <th>, cada fila con un <tr> y cada celda con <td>.
+
+<table>
+	<tr>
+		<th></th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
+ESTILADO DE TABLAS:
+
+border-collapse → una sola línea en el borde, no por cada elemento.
+text-alignn → horizontalmente.
+vertical-align → verticalmente.
+
+Para que sea responsiva:
+Poner un div contenedor con la propiedad overflow-x con el valor auto.
+De ésta manera lograremos un scroll que hará que podamos ver toda la tabla correctamente.
